@@ -28,3 +28,18 @@ p{
     text-align: center;
     cursor: pointer;
 }
+
+/* making the page responsive */
+
+@media screen and (max-width: 900px) {
+
+    img{
+        margin-top: 30%;
+    }
+    p{
+        width: 250px;
+        height: 70px;
+        font-size: 50px;
+        margin-top: 70px;
+    }
+}

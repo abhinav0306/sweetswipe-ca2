@@ -45,4 +45,32 @@ button{
     cursor: pointer;
     margin-top: 60px;
     font-size: 30px;
+    color: #fff;
+}
+/* making the page responsive */
+@media screen and (max-width: 900px) {
+    img{
+        /* margin-top: 200px; */
+        height: 300px;
+        width: 300px;
+    }
+    #instruction h1{
+        text-align: center;
+        margin:0;
+        font-weight: 100;
+    }
+    
+    #instruction {
+        font-size: 27px;
+        margin-top: 10px;
+        width: 75%;
+        height: 50%;
+    }
+
+    button {
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+        margin-top: 3%;
+    }
 }

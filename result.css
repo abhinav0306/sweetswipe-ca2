@@ -28,6 +28,7 @@ body{
     padding: 20px;
     margin-top: 40px;
 }
+/* making the restart button */
 #restart{
     background-color: greenyellow;
     border: 2px solid greenyellow;
@@ -39,4 +40,24 @@ body{
     margin-top: 40px;
     font-size: 25px;
     color: white;
+}
+
+/* making the page responsive */
+@media screen and (max-width: 700px) {
+
+    #message{
+    border-radius: 25px;
+    height: 50%;
+    width: 95%;
+    margin-top: 100px;
+}
+#restart{
+    
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 30px;
+}
 }
