@@ -5,19 +5,21 @@
     box-sizing: border-box;
     font-family: 'Leckerli One', cursive;
 }
+/* setting background image and giving it blur effect */
 body{
-    background-image: url(assets/bg.jpg); /* Replace with the path to your background image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  color: #fff;
-  font-size: 30px;
+    background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 30px;
 }
-span{
+/* making start button */
+p{
     background-color: greenyellow;
     border: 2px solid greenyellow;
     border-radius: 25px;
