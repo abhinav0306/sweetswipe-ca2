@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Leckerli+One&family=Poppins:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Leckerli One', cursive;
+    overflow: 0;;
+}
+/* setting background image and giving it blur effect */
+body{
+    background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: #fff;
+}

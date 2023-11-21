@@ -18,7 +18,7 @@ body{
     backdrop-filter: blur(10px);
     color: #fff;
 }
-
+/* giving background color and styling effect to instruction box */
 #instruction{
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
@@ -33,6 +33,7 @@ body{
     margin-bottom: 20px;
     font-weight: 400;
 }
+
 /* making let's crush button */
 button{
     background-color: greenyellow;
