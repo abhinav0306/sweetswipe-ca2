@@ -17,7 +17,10 @@ body{
     align-items: center;
     backdrop-filter: blur(10px);
     color: #fff;
-    padding: 70px;
+    justify-content: space-around;
+}
+img{
+    margin-top: 50px;
 }
 #message{
     background-color: rgba(0, 0, 0, 0.8);
@@ -26,7 +29,7 @@ body{
     width: 650px;
     font-size: 20px;
     padding: 20px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 /* making the restart button */
 #restart{
@@ -37,7 +40,7 @@ body{
     height: 50px;
     text-align: center;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 0px;
     font-size: 25px;
     color: white;
 }
@@ -47,9 +50,13 @@ body{
 
     #message{
     border-radius: 25px;
-    height: 50%;
+    height: 40%;
     width: 95%;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+img{
+    height: 200px;
+    width: 300px;
 }
 #restart{
     
@@ -57,7 +64,7 @@ body{
     height: 50px;
     text-align: center;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 30px;
 }
 }

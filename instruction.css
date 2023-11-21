@@ -51,26 +51,26 @@ button{
 @media screen and (max-width: 900px) {
     img{
         /* margin-top: 200px; */
-        height: 300px;
-        width: 300px;
+        height: 150px;
+        width: 150px;
     }
     #instruction h1{
         text-align: center;
         margin:0;
+        font-size: 20px;
         font-weight: 100;
     }
     
     #instruction {
-        font-size: 27px;
-        margin-top: 10px;
+        font-size: 15px;
         width: 75%;
         height: 50%;
     }
 
     button {
-        width: 200px;
-        height: 60px;
-        font-size: 30px;
-        margin-top: 3%;
+        width: 150px;
+        height: 40px;
+        font-size: 15px;
+        padding: 5px;
     }
 }

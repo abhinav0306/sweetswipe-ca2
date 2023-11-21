@@ -22,7 +22,9 @@ body{
 #info-screen{
     flex-direction: column;
     gap: 10px;
+    
 }
+
 #info-screen p, #target p{
     border-radius: 25px;
     width: 250px;
@@ -55,15 +57,27 @@ body{
 }
 
 /* making the page responsive */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     img{
-        height: 300px;
+        height: 150px;
+        display: none;
     }
     body{
         flex-direction: column;
+
     }
     #game-screen{
-        width: 500px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
+    }
+    #info-screen p, #target p{
+        border-radius: 25px;
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        font-size: 15px;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.6) ;
+        justify-content: center;
     }
 }
