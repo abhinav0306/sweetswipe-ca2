@@ -13,43 +13,30 @@ body{
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     backdrop-filter: blur(10px);
     color: #fff;
+    padding: 70px;
 }
-
-#info-screen{
-    flex-direction: column;
-    gap: 10px;
-}
-#info-screen p{
+#message{
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
-    width: 250px;
+    height: 120px;
+    width: 650px;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+#restart{
+    background-color: greenyellow;
+    border: 2px solid greenyellow;
+    border-radius: 25px;
+    width: 200px;
     height: 50px;
     text-align: center;
+    cursor: pointer;
+    margin-top: 40px;
     font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.6) ;
-    justify-content: center;
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-}
-
-#game-screen{
-    width: 450px;
-    height: 450px;
-    background-color: #1B31F2;
-    border: 5px solid #1B31F2;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-#game-screen img{
-    width: 50px;
-    height: 50px;
+    color: white;
 }
