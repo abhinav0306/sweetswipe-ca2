@@ -57,6 +57,7 @@ img{
 img{
     height: 200px;
     width: 300px;
+    margin-top: 10px;
 }
 #restart{
     
@@ -64,7 +65,6 @@ img{
     height: 50px;
     text-align: center;
     cursor: pointer;
-    
     font-size: 30px;
 }
 }
