@@ -41,34 +41,32 @@ body{
 }
 
 #game-screen{
-    width: 450px;
-    height: 450px;
+    width: 435px;
+    height: 430px;
     background-color: #1B31F2;
     border: 5px solid #1B31F2;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 
 #game-screen img{
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
 }
 
 /* making the page responsive */
 @media screen and (max-width: 1200px) {
-    img{
-        height: 150px;
-        display: none;
-    }
+
     body{
         flex-direction: column;
 
     }
     #game-screen{
-        width: 300px;
-        height: 300px;
+        width: 330px;
+        height: 327px;
     }
     #info-screen p, #target p{
         border-radius: 25px;
@@ -79,5 +77,13 @@ body{
         padding: 5px;
         background-color: rgba(0, 0, 0, 0.6) ;
         justify-content: center;
+    }
+    #info-screen img{
+        display: none;
+    }
+    #game-screen img{
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
     }
 }
