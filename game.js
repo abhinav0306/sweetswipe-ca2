@@ -267,3 +267,6 @@ function gameOver(){
         location.href="result.html"
     }
 }
+
+
+

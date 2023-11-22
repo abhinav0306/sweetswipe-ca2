@@ -20,7 +20,7 @@ body{
     justify-content: space-around;
 }
 img{
-    margin-top: 50px;
+    margin-top: 00px;
 }
 #message{
     background-color: rgba(0, 0, 0, 0.8);
@@ -50,14 +50,14 @@ img{
 
     #message{
     border-radius: 25px;
-    height: 40%;
+    height: 30%;
     width: 95%;
-    margin-top: 50px;
+    margin-top: -30%;
 }
 img{
     height: 200px;
     width: 300px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 #restart{
     
@@ -66,5 +66,6 @@ img{
     text-align: center;
     cursor: pointer;
     font-size: 30px;
+    margin-top: -30%;
 }
 }
