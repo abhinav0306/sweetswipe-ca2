@@ -27,7 +27,7 @@ img{
     border-radius: 25px;
     height: fit-content;
     width: fit-content;
-    font-size: 20px;
+    font-size: 30px;
     padding: 20px;
     /* margin-top: 40px; */
 }
@@ -40,7 +40,7 @@ img{
     height: 50px;
     text-align: center;
     cursor: pointer;
-    margin-top: 0px;
+    margin-top:0px;
     font-size: 25px;
     color: white;
 }
@@ -52,7 +52,10 @@ img{
     border-radius: 25px;
     height: fit-content;
     width: fit-content;
-    margin-top: -30%;
+    margin-top: -50%;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 img{
     height: 200px;
@@ -66,6 +69,6 @@ img{
     text-align: center;
     cursor: pointer;
     font-size: 30px;
-    margin-top: -30%;
+    margin-top: -50%;
 }
 }

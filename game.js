@@ -184,7 +184,7 @@ function crushThree() {
                 c2.src="assets/candy/blank.png"
                 c3.src="assets/candy/blank.png"
                 score+=10;
-                blastSound()
+                blastSound();
             }
         }
     }
@@ -285,60 +285,65 @@ function playBackgroundMusic() {
     var audio = document.getElementById('bgMusic');
     audio.play();
   }
-
-
+// function for playing sound effect whenever a candy is brushed
   function blastSound() {
     var audio = document.getElementById('blast');
     audio.play();
   }
 
-// ... (your existing code)
 
-// Function to handle touch start
+  //touch event functions:
 function touchStart(event) {
-    currentTile = event.targetTouches[0];
-    event.preventDefault(); // Prevent default touch behavior to avoid issues with some browsers
+
+    // event.preventDefault();
+    currentTile = event.target;
 }
 
-// Function to handle touch move
 function touchMove(event) {
-    event.preventDefault();
+    // event.preventDefault();
 }
 
-// Function to handle touch end
 function touchEnd(event) {
-    newTile = event.changedTouches[0];
-
-    if (currentTile.src.includes("blank") || newTile.src.includes("blank")) {
+    // event.preventDefault();
+    if (!currentTile || !event.changedTouches[0]) {
         return;
     }
 
-    let currentCoord = currentTile.target.id.split("-");
+    // Get the newTile using the changedTouches array
+    let touch = event.changedTouches[0];
+    let newTile = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    // Getting coordinates of the current tile and the new tile
+    let currentCoord = currentTile.id.split("-");
     let r = parseInt(currentCoord[0]);
     let c = parseInt(currentCoord[1]);
-
-    let newCoord = newTile.target.id.split("-");
+    
+    let newCoord = newTile.id.split("-");
     let r2 = parseInt(newCoord[0]);
     let c2 = parseInt(newCoord[1]);
 
-    let left = c2 == c - 1 && r == r2;
-    let right = c2 == c + 1 && r == r2;
-    let up = r2 == r - 1 && c == c2;
-    let down = r2 == r + 1 && c == c2;
+    // Making swap feature available to adjacent tiles only
+    let left = c2 === c - 1 && r === r2;
+    let right = c2 === c + 1 && r === r2;
+    let up = r2 === r - 1 && c === c2;
+    let down = r2 === r + 1 && c === c2;
 
     let nearby = left || right || up || down;
 
     if (nearby) {
-        let currentImg = currentTile.target.src;
-        let newImg = newTile.target.src;
-        currentTile.target.src = newImg;
-        newTile.target.src = currentImg;
+        // Changing the images of the rows and columns
+        let currentImg = currentTile.src;
+        let newImg = newTile.src;
+        currentTile.src = newImg;
+        newTile.src = currentImg;
 
         let valid = validMoveCheck();
         if (!valid) {
-            currentTile.target.src = newImg;
-            newTile.target.src = currentImg;
+            // If the move is not valid, revert the swap
+            currentTile.src = currentImg;
+            newTile.src = newImg;
         } else {
+            // If the move is valid, update moves and check game state
             moves--;
             movesDoc.innerText = moves;
             if (moves === 0) {
@@ -350,15 +355,31 @@ function touchEnd(event) {
     }
 }
 
-// Attach touch event listeners
-document.addEventListener('touchstart', touchStart);
-document.addEventListener('touchmove', touchMove);
-document.addEventListener('touchend', touchEnd);
 
-// ... (your existing code)
+function addTouchListeners() {
+    gamescreen.addEventListener("touchstart", touchStart);
+    gamescreen.addEventListener("touchmove", touchMove);
+    gamescreen.addEventListener("touchend", touchEnd);
+}
 
+// Function to remove touch event listeners
+function removeTouchListeners() {
+    gamescreen.removeEventListener("touchstart", touchStart);
+    gamescreen.removeEventListener("touchmove", touchMove);
+    gamescreen.removeEventListener("touchend", touchEnd);
+}
 
+// Function to check screen width and add/remove touch event listeners
+function checkScreenWidth() {
+    if (window.innerWidth < 900) {
+        addTouchListeners();
+    } else {    
+        removeTouchListeners();
+    }
+}
 
+// Event listener for screen resize
+window.addEventListener("resize", checkScreenWidth);
 
-
-
+// Call the function initially
+checkScreenWidth();
