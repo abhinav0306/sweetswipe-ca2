@@ -348,8 +348,6 @@ function touchEnd(event) {
                 location.href = "result.html";
             }
         }
-    } else {
-        alert("You can only swap adjacent 🍬!!!!");
     }
 }
 
