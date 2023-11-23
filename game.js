@@ -138,8 +138,6 @@ function dragEnd() {
                 
             }
         }
-    }else{
-        alert("You can only swap adjacent 🍬!!!!")
     }
 }
 
