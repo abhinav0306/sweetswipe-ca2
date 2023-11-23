@@ -302,7 +302,7 @@ function touchMove() {
 }
 
 function touchEnd(event) {
-    event.preventDefault();
+    // event.preventDefault();
     if (!currentTile || !event.changedTouches[0]) {
         return;
     }
