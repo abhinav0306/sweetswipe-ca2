@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded",function() {
         updateHighScore();
         gameOver();
     },100);
+    playBackgroundMusic();
     
 });
 
@@ -134,6 +135,7 @@ function dragEnd() {
             movesDoc.innerText=moves;
             if(moves===0){
                 location.href="result.html"
+                
             }
         }
     }else{
@@ -146,6 +148,7 @@ function dragEnd() {
 function crushCandy() {
     crushThree();
     scoredoc.innerText=score;
+    localStorage.setItem("finalscore",score)
 }
 
 //function to crush three candies
@@ -163,6 +166,7 @@ function crushThree() {
                 c2.src="assets/candy/blank.png"
                 c3.src="assets/candy/blank.png"
                 score+=10;
+                blastSound()
             }
         }
     }
@@ -180,6 +184,7 @@ function crushThree() {
                 c2.src="assets/candy/blank.png"
                 c3.src="assets/candy/blank.png"
                 score+=10;
+                blastSound()
             }
         }
     }
@@ -256,17 +261,104 @@ function updateHighScore() {
         highScoreDoc.innerText = highScore;
     }
 }
+//gameover function to redirect the page when the game is over
+function gameOver() {
 
-
-function gameOver(){
-    if (score>=targetValue || moves<=0){
-        location.href="result.html"
+    if (score >= targetValue && moves <= 0) {
         
+        localStorage.setItem("gameResult", "win" );
+        location.href = "result.html";
     }
-    if(moves===0){
-        location.href="result.html"
+    if(score==targetValue){
+        localStorage.setItem("gameResult", "win" );
+        location.href = "result.html";
+    }
+    else if(moves<=0 && score!=targetValue) {
+        localStorage.setItem("gameResult", "lost" );
+        location.href = "result.html";
+    }
+  }
+
+
+  // background music player function
+function playBackgroundMusic() {
+    var audio = document.getElementById('bgMusic');
+    audio.play();
+  }
+
+
+  function blastSound() {
+    var audio = document.getElementById('blast');
+    audio.play();
+  }
+
+// ... (your existing code)
+
+// Function to handle touch start
+function touchStart(event) {
+    currentTile = event.targetTouches[0];
+    event.preventDefault(); // Prevent default touch behavior to avoid issues with some browsers
+}
+
+// Function to handle touch move
+function touchMove(event) {
+    event.preventDefault();
+}
+
+// Function to handle touch end
+function touchEnd(event) {
+    newTile = event.changedTouches[0];
+
+    if (currentTile.src.includes("blank") || newTile.src.includes("blank")) {
+        return;
+    }
+
+    let currentCoord = currentTile.target.id.split("-");
+    let r = parseInt(currentCoord[0]);
+    let c = parseInt(currentCoord[1]);
+
+    let newCoord = newTile.target.id.split("-");
+    let r2 = parseInt(newCoord[0]);
+    let c2 = parseInt(newCoord[1]);
+
+    let left = c2 == c - 1 && r == r2;
+    let right = c2 == c + 1 && r == r2;
+    let up = r2 == r - 1 && c == c2;
+    let down = r2 == r + 1 && c == c2;
+
+    let nearby = left || right || up || down;
+
+    if (nearby) {
+        let currentImg = currentTile.target.src;
+        let newImg = newTile.target.src;
+        currentTile.target.src = newImg;
+        newTile.target.src = currentImg;
+
+        let valid = validMoveCheck();
+        if (!valid) {
+            currentTile.target.src = newImg;
+            newTile.target.src = currentImg;
+        } else {
+            moves--;
+            movesDoc.innerText = moves;
+            if (moves === 0) {
+                location.href = "result.html";
+            }
+        }
+    } else {
+        alert("You can only swap adjacent 🍬!!!!");
     }
 }
+
+// Attach touch event listeners
+document.addEventListener('touchstart', touchStart);
+document.addEventListener('touchmove', touchMove);
+document.addEventListener('touchend', touchEnd);
+
+// ... (your existing code)
+
+
+
 
 
 

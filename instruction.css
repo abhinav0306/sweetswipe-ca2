@@ -64,7 +64,7 @@ button{
     #instruction {
         font-size: 15px;
         width: 75%;
-        height: 50%;
+        height: fit-content;
     }
 
     button {

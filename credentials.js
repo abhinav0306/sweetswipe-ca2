@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("start").addEventListener("click", function () {
         const selectedLevel = document.getElementById("level").value;
+        const nicknameinp=document.getElementById("nickname")
         let targetValue;
-        let moves;
         switch (selectedLevel) {
             case "easy":
                 targetValue = 100;
@@ -21,9 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         //using localstorage to set item which will be used in game.js to show the target with the respective level selected
         localStorage.setItem("targetValue", targetValue);
-
-        //redirecting to the next page
-        // location.href = "instruction.html";
+        nickname=nicknameinp.value
+        localStorage.setItem("nickName",nickname)
     });
 });
 
