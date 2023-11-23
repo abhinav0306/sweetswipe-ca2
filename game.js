@@ -297,7 +297,7 @@ function touchStart(event) {
     currentTile = event.target;
 }
 
-function touchMove(event) {
+function touchMove() {
     // event.preventDefault();
 }
 
@@ -353,7 +353,7 @@ function touchEnd(event) {
     }
 }
 
-
+//making the game functional in mobile by using touch event listeners
 function addTouchListeners() {
     gamescreen.addEventListener("touchstart", touchStart);
     gamescreen.addEventListener("touchmove", touchMove);
