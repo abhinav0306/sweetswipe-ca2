@@ -302,7 +302,7 @@ function touchMove() {
 }
 
 function touchEnd(event) {
-    // event.preventDefault();
+    event.preventDefault();
     if (!currentTile || !event.changedTouches[0]) {
         return;
     }
@@ -315,7 +315,7 @@ function touchEnd(event) {
     let currentCoord = currentTile.id.split("-");
     let r = parseInt(currentCoord[0]);
     let c = parseInt(currentCoord[1]);
-    
+
     let newCoord = newTile.id.split("-");
     let r2 = parseInt(newCoord[0]);
     let c2 = parseInt(newCoord[1]);
@@ -348,10 +348,9 @@ function touchEnd(event) {
                 location.href = "result.html";
             }
         }
-    } else {
-        alert("You can only swap adjacent 🍬!!!!");
     }
 }
+
 
 //making the game functional in mobile by using touch event listeners
 function addTouchListeners() {
