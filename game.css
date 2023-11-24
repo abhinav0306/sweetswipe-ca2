@@ -67,6 +67,12 @@ body{
     width: 47px;
     height: 47px;
 }
+#buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
 
 /* making the page responsive */
 @media screen and (max-width: 1200px) {

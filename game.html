@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/Colorful_Illustrative_Candy_Shop_Logo-removebg-preview.png" type="image/png">
 
 </head>
+
 <body>
     <audio id="bgMusic" loop>
         <source src="assets/gamescreenbgm.mp3" type="audio/mp3"> 
@@ -17,7 +18,13 @@
         <source src="assets/colour-bomb-created.mp3" type="audio/mp3">
     </audio>
     <!-- making different divs for diffrent section  -->
+    
     <div id="info-screen" class="flex">
+        <div id="buttons">
+            
+            <img src="assets/icons8-full-screen-48.png" alt="fullscreen" id="fullscreen" height="30px" width="30px">
+            <img src="https://imgs.search.brave.com/VsYH_1ohpq6aUhOU3JgfrrfHchDDwtX95YtDbtXNkRA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC92b2x1bWUt/bXV0ZS1pY29uLTI1/NngyNTEtdWpvcnBj/eDEucG5n" id="mute" alt="mute" width="20px" height="20px">
+        </div>
         <p class="flex" id="nickname"></p>
         <p class="flex samewidth">High Score: <span id="highscore">0</span></p>
         <img src="assets/Colorful_Illustrative_Candy_Shop_Logo-removebg-preview.png" id="logo" alt="logo" width="300px" height="300px" >
@@ -33,6 +40,7 @@
         <p class="flex">Target: <span id="targetscore"> 999</span></p>
         <img src="assets/girl_imgfinal.png" alt="girl" id="girl">
     </div>
+    
 </body>
 <script src="game.js"></script>
 </html>

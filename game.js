@@ -279,17 +279,54 @@ function gameOver() {
 
 
   // background music player function
+const audio1 = document.getElementById('bgMusic');
 function playBackgroundMusic() {
-    var audio = document.getElementById('bgMusic');
-    audio.play();
+    
+    audio1.play();
   }
 // function for playing sound effect whenever a candy is brushed
+const audio2 = document.getElementById('blast');
 function blastSound() {
-    var audio = document.getElementById('blast');
-    audio.play();
+    
+    audio2.play();
   }
+//mute button function
+function toggleBackgroundMusic() {
+    if (audio1.paused) {
+        audio1.play();
+    } else {
+        audio1.pause();
+    }
+}
+function toggleBlastSound() {
+    if (audio2.paused) {
+        audio2.play();
+    } else {
+        audio2.pause();
+    }
+}
 
+const muteButton = document.getElementById('mute');
+muteButton.addEventListener('click', function () {
+    toggleBackgroundMusic();
+    toggleBlastSound();
+});
 
+//fullscreen button function
+const fullscreenButton = document.getElementById('fullscreen');
+
+fullscreenButton.addEventListener('click', function () {
+    toggleFullscreen();
+});
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
   //touch event functions:
 function touchStart(event) {
 
@@ -382,3 +419,5 @@ checkScreenWidth();
 const nameValue = localStorage.getItem("nickName");
 const nameDisplay = document.getElementById("nickname");
 nameDisplay.textContent = "Hey " + nameValue +"! Welcome to the Sweet Saga"
+
+
