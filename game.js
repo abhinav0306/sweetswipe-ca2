@@ -15,7 +15,7 @@ const movesDoc=document.getElementById("moves")
 
 
 
-//calling required functions
+//calling required functions at every 1/10 sec
 document.addEventListener("DOMContentLoaded",function() {
     sweetStart();
     setInterval(function() {
@@ -284,7 +284,7 @@ function playBackgroundMusic() {
     audio.play();
   }
 // function for playing sound effect whenever a candy is brushed
-  function blastSound() {
+function blastSound() {
     var audio = document.getElementById('blast');
     audio.play();
   }
@@ -293,16 +293,14 @@ function playBackgroundMusic() {
   //touch event functions:
 function touchStart(event) {
 
-    // event.preventDefault();
     currentTile = event.target;
 }
 
 function touchMove() {
-    // event.preventDefault();
+    
 }
 
 function touchEnd(event) {
-    event.preventDefault();
     if (!currentTile || !event.changedTouches[0]) {
         return;
     }
@@ -359,14 +357,14 @@ function addTouchListeners() {
     gamescreen.addEventListener("touchend", touchEnd);
 }
 
-// Function to remove touch event listeners
+//function to remove touch event listeners
 function removeTouchListeners() {
     gamescreen.removeEventListener("touchstart", touchStart);
     gamescreen.removeEventListener("touchmove", touchMove);
     gamescreen.removeEventListener("touchend", touchEnd);
 }
 
-// Function to check screen width and add/remove touch event listeners
+//function to check screen width start/stop touch event listeners
 function checkScreenWidth() {
     if (window.innerWidth < 900) {
         addTouchListeners();
@@ -375,8 +373,10 @@ function checkScreenWidth() {
     }
 }
 
-// Event listener for screen resize
 window.addEventListener("resize", checkScreenWidth);
-
-// Call the function initially
 checkScreenWidth();
+ 
+
+const nameValue = localStorage.getItem("nickName");
+const nameDisplay = document.getElementById("nickname");
+nameDisplay.textContent = "Hey " + nameValue +"! Welcome to the Sweet Saga"

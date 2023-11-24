@@ -30,7 +30,7 @@ const losingMessages = [
 // getting result from the game.js file by using local storage 
 var resultmsgDoc = document.getElementById("message");
 var result = localStorage.getItem("gameResult");
-nickname=localStorage.getItem("nickName")
+nickname=localStosrage.getItem("nickName")
 finalscore=localStorage.getItem("finalscore")
 
 

@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             case "hard":
                 targetValue = 200;
                 break;
-            default:
-                targetValue = 150; // Default value
+            
         }
         //using localstorage to set item which will be used in game.js to show the target with the respective level selected
         localStorage.setItem("targetValue", targetValue);

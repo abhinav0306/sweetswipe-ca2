@@ -17,6 +17,7 @@ body{
     align-items: center;
     backdrop-filter: blur(10px);
     color: #fff;
+    padding: 20px;
 }
 
 #info-screen{
@@ -25,7 +26,7 @@ body{
     
 }
 
-#info-screen p, #target p{
+.samewidth, #target p{
     border-radius: 25px;
     width: 250px;
     height: 50px;
@@ -39,7 +40,10 @@ body{
     display: flex;
     align-items: center;
 }
-
+#target{
+    flex-direction: column;
+    gap: 50px;
+}
 #game-screen{
     width: 435px;
     height: 430px;
@@ -51,7 +55,14 @@ body{
     margin: 0 auto;
 }
 
-
+#nickname{
+    width: fit-content;
+    border-radius: 25px;
+    height: 50px;
+    font-size: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6) ;
+}
 #game-screen img{
     width: 47px;
     height: 47px;
@@ -63,17 +74,20 @@ body{
     body{
         flex-direction: column;
 
+        padding: 0px;
+
     }
     #game-screen{
-        width: 330px;
-        height: 327px;
+        width: 300px;
+        height: 315px;
     }
-    #info-screen p, #target p{
+    .samewidth, #target p{
         border-radius: 25px;
         width: 150px;
         height: 50px;
         text-align: center;
         font-size: 15px;
+        /* background-color: #1B31F2; */
         padding: 5px;
         background-color: rgba(0, 0, 0, 0.6) ;
         justify-content: center;
@@ -82,8 +96,11 @@ body{
         display: none;
     }
     #game-screen img{
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
         object-fit: cover;
+    }
+    #girl{
+        display: none;
     }
 }
