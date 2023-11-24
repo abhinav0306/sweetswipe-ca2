@@ -301,11 +301,7 @@ function touchMove() {
 }
 
 function touchEnd(event) {
-<<<<<<< HEAD
-=======
-    // event.preventDefault();
->>>>>>> 6191c2322dcbcde7a81561791a369fbfb2d692b2
-    if (!currentTile || !event.changedTouches[0]) {
+git     if (!currentTile || !event.changedTouches[0]) {
         return;
     }
 
