@@ -301,7 +301,9 @@ function touchMove() {
 }
 
 function touchEnd(event) {
-git     if (!currentTile || !event.changedTouches[0]) {
+    
+    if (!currentTile || !event.changedTouches[0]) {
+    
         return;
     }
 
