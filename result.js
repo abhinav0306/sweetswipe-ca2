@@ -1,12 +1,18 @@
 //adding functionality to restart button and redirecting it to next page
 var restartBtn = document.getElementById('restart');
 restartBtn.addEventListener('click', function() {
+    window.location.href = 'credentials.html';
+    localStorage.removeItem("gameResult");
+});
+
+var homeBtn = document.getElementById('home');
+homeBtn.addEventListener('click', function() {
     window.location.href = 'index.html';
     localStorage.removeItem("nickName");
     localStorage.removeItem("gameResult");
+    
 
 });
-
 
 
 // array for winning messages
