@@ -13,4 +13,4 @@ function playBackgroundMusic() {
     audio.play();
   }
 
-window.onload=playBackgroundMusic
+window.onload=playBackgroundMusic();

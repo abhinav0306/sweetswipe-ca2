@@ -42,6 +42,8 @@ finalscore=localStorage.getItem("finalscore")
 
 //displaying the respective message according to the result 
 if (result === "win") {
+
+  playBackgroundMusic()
     resultmsgDoc.innerHTML = "Hey👋🏻 "+ nickname + ", " +winningMessages[Math.floor(Math.random() * winningMessages.length)] + " You scored "+ finalscore+ " points🍬.";
 }else if (result==="lost"){
     resultmsgDoc.textContent = "Hey "+ nickname + ", " +losingMessages[Math.floor(Math.random() * losingMessages.length)]+ " You scored "+ finalscore+ " points.🍬";
@@ -54,7 +56,6 @@ function playBackgroundMusic() {
     audio.play();
   }
 
-window.onload=playBackgroundMusic
 
 
 
