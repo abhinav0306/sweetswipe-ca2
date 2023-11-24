@@ -344,7 +344,7 @@ function touchEnd(event) {
         return;
     }
 
-    // Get the newTile using the changedTouches array
+    // getting the newTile using the changedTouches array
     let touch = event.changedTouches[0];
     let newTile = document.elementFromPoint(touch.clientX, touch.clientY);
 
@@ -419,5 +419,3 @@ checkScreenWidth();
 const nameValue = localStorage.getItem("nickName");
 const nameDisplay = document.getElementById("nickname");
 nameDisplay.textContent = "Hey " + nameValue +"! Welcome to the Sweet Saga"
-
-
