@@ -381,9 +381,6 @@ function touchEnd(event) {
             // If the move is valid, update moves and check game state
             moves--;
             movesDoc.innerText = moves;
-            if (moves === 0) {
-                location.href = "result.html";
-            }
         }
     }
 }

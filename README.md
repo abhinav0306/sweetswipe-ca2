@@ -5,6 +5,7 @@
 
 Welcome to the Sweet Swipe project, a recreation of the classic match-three puzzle game! Our goal with this project was to provide an engaging and enjoyable gaming experience while exploring various game development concepts.
 
+
 ### 🔴Key Features
 
 - Classic match-three gameplay with a selection of three levels.
@@ -16,19 +17,36 @@ This game was made for our Front-End CA-2. Our primary objectives for this proje
 
 # 🧑🏻‍💻Tech Stack
 
-This Candy Crush project was built using the following technologies and frameworks:
+This SweetSwipe project was built using the following technologies and frameworks:
 
 - **HTML5** 
 - **CSS**
 - **JavaScript**.
 
+# Pages
 
-## 🔗 References
-https://www.canva.com/  
-https://www.w3schools.com/  
-https://www.geeksforgeeks.org/  
-https://icons8.com/icons   
-https://www.sounds-resource.com/  
+Welcome to the SweetSwipe website, a delightful platform that takes you through various stages of the gaming experience. Below is an overview of each of the five main pages.
+
+## 1. Home Screen
+
+The **Home Screen** is the gateway to the SweetSwipe adventure. Here user is required to click on the play button and start the adventure.
+
+## 2. Credentials Screen
+
+The **Credentials Screen** is where users have to enter their name, nickname and select a level to play.
+
+## 3. Instruction Screen
+
+The **Instruction Screen** acts as a guide for players, providing essential information on how to play the game. This section covers game mechanics and objectives. Clear visuals and concise instructions ensure players are ready to dive into the SweetSwipe world.
+
+## 4. Game Screen
+
+The heart of the SweetSwipe experience lies in the **Game Screen**. Here, players engage in the classic match-three puzzle gameplay. Expect a visually appealing game board, animated candies, and an intuitive interface that facilitates an immersive gaming experience.
+
+## 5. Result Screen
+
+After completing a level or the entire game, players are directed to the **Result Screen**. This section displays their performance and scores. It provides a satisfying conclusion to the gaming session. From this page user can go to the **Game Screen** or **Home Screen**.
+
 
 
 ## Screenshots
@@ -41,3 +59,12 @@ https://www.sounds-resource.com/
 ![sweetswipess4](https://github.com/abhinav0306/sweetswipe-ca2/assets/144326505/21d7c8aa-47e3-411e-9054-20646469a34f)
 
 ![sweetswipess5](https://github.com/abhinav0306/sweetswipe-ca2/assets/144326505/a277729c-53c4-41ba-b355-4998848f84bd)
+
+
+## 🔗 References
+https://www.canva.com/  
+https://www.w3schools.com/  
+https://www.geeksforgeeks.org/  
+https://icons8.com/icons   
+https://www.sounds-resource.com/  
+https://www.youtube.com/
