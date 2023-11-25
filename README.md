@@ -3,8 +3,7 @@
 
 ## 🍬Overview
 
-Welcome to the Sweet Swipe project, a recreation of the classic match-three puzzle game! Our goal with this project was to provide an engaging and enjoyable gaming experience while exploring various game development concepts.
-
+Welcome to the Sweet Swipe project, a recreation of the classic match-three puzzle game! Our goal with this project was to provide an engaging and enjoyable gaming experience while exploring various game development concepts. This game is made for both mobile and laptop/pc screens. Enjoy!
 
 ### 🔴Key Features
 
