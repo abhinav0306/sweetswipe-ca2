@@ -267,11 +267,11 @@ function gameOver() {
         localStorage.setItem("gameResult", "win" );
         location.href = "result.html";
     }
-    if(score==targetValue){
+    if(score==targetValue && moves>=0){
         localStorage.setItem("gameResult", "win" );
         location.href = "result.html";
     }
-    else if(moves<=0 && score!=targetValue) {
+    else if(moves==0 && score<targetValue) {
         localStorage.setItem("gameResult", "lost" );
         location.href = "result.html";
     }
@@ -415,7 +415,7 @@ function checkScreenWidth() {
 window.addEventListener("resize", checkScreenWidth);
 checkScreenWidth();
  
-
+//taking item from localstorage to display name with message
 const nameValue = localStorage.getItem("nickName");
 const nameDisplay = document.getElementById("nickname");
 nameDisplay.textContent = "Hey " + nameValue +"! Welcome to the Sweet Saga"
