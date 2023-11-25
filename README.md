@@ -1,5 +1,5 @@
 
-# Sweet Swipe : The Sweet Saga
+# Sweet Swipe: The Sweet Saga
 
 ## 🍬Overview
 
@@ -13,7 +13,7 @@ Welcome to the Sweet Swipe project, a recreation of the classic match-three puzz
 
 ### 🎯Project Goals
 
-This game was made for our Front-End CA-2. Our primary objectives for this project were to deepen our understanding of game development, improve our skills in HTML, CSS and JavaScript, and create a fun and visually appealing game for players of all ages.
+This game was made for our Front-End CA-2. Our primary objectives for this project were to deepen our understanding of game development, improve our skills in HTML, CSS, and JavaScript, and create a fun and visually appealing game for players of all ages.
 
 # 🧑🏻‍💻Tech Stack
 
@@ -33,7 +33,7 @@ The **Home Screen** is the gateway to the SweetSwipe adventure. Here user is req
 
 ## 2. Credentials Screen
 
-The **Credentials Screen** is where users have to enter their name, nickname and select a level to play.
+The **Credentials Screen** is where users have to enter their name, and nickname and select a level to play.
 
 ## 3. Instruction Screen
 
@@ -68,3 +68,5 @@ https://www.geeksforgeeks.org/
 https://icons8.com/icons   
 https://www.sounds-resource.com/  
 https://www.youtube.com/
+
+I've referred to Kenny Yip Coding's YouTube channel for clearing my concepts. 
